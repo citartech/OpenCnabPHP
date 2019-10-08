@@ -116,12 +116,12 @@ class Registro0 extends Generico0
 			'required'=>true),
 		'data_geracao'=>array(
 			'tamanho'=>8,
-			'default'=>'',// nao informar a data na instanciação - gerada dinamicamente
+			'default'=>'',// nao informar a data na instanciaï¿½ï¿½o - gerada dinamicamente
 			'tipo'=>'int',
 			'required'=>true),
 		'hora_geracao'=>array(
 			'tamanho'=>6,
-			'default'=>'',// nao informar a data na instanciação - gerada dinamicamente
+			'default'=>'',// nao informar a data na instanciaï¿½ï¿½o - gerada dinamicamente
 			'tipo'=>'int',
 			'required'=>true),
 		'NSA'=>array(
