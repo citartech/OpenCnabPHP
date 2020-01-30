@@ -27,18 +27,21 @@
 
 namespace CnabPHP;
 
-class DetalhaMovimentoRetorno {
+class DetalhaMovimentoRetorno
+{
 
     private $descricoes = array();
     private $banco;
 
-    public function __construct($banco, $layout) {
+    public function __construct($banco, $layout)
+    {
         $this->banco = $banco;
         $stringMetodo = "preparaBanco" . $banco . "_" . $layout;
         $this->descricoes = $this->$stringMetodo();
     }
 
-    public function preparaBanco033_240() {
+    public function preparaBanco033_240()
+    {
         /**
          * Descrição dos comandos
          *      Banco Santander (033)
@@ -180,11 +183,13 @@ class DetalhaMovimentoRetorno {
         return $descricaoMovimento;
     }
 
-    public function getBanco() {
+    public function getBanco()
+    {
         return $this->banco;
     }
 
-    public function getArrayTxtOcorrencias($codigoMovimento, $srtCodDetalhes) {
+    public function getArrayTxtOcorrencias($codigoMovimento, $srtCodDetalhes)
+    {
         $arrayCodDetalhes = str_split($srtCodDetalhes, 2);
         $arrayDescricoes = array();
 
