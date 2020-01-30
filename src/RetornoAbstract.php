@@ -1,4 +1,5 @@
 <?php
+
 namespace CnabPHP;
 
 use Exception;

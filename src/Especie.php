@@ -27,7 +27,8 @@
 
 namespace CnabPHP;
 
-class Especie {
+class Especie
+{
 
     private $res = array();
     private $itau = array();
@@ -39,7 +40,8 @@ class Especie {
     private $santander = array();
     private $banco;
 
-    public function __construct($banco = null) {
+    public function __construct($banco = null)
+    {
         $this->caixa[1] = array('abr' => "CH", 'txt' => 'Cheque');
         $this->caixa[2] = array('abr' => "DM", 'txt' => 'Duplicata Mercantil');
         $this->caixa[3] = array('abr' => "DMI", 'txt' => 'Mercantil p/ Indicação');
@@ -173,20 +175,22 @@ class Especie {
         $this->banco = $this->res[$banco];
     }
 
-    public function getAbr($especie) {
+    public function getAbr($especie)
+    {
         return $this->banco[$especie]['abr'];
     }
 
-    public function getBanco() {
+    public function getBanco()
+    {
         return $this->banco;
     }
 
-    public function getCodigo($abr) {
+    public function getCodigo($abr)
+    {
         foreach ($this->banco as $key => $especie) {
             if ($especie['abr'] == $abr) {
                 return $key;
             }
         }
     }
-
 }
